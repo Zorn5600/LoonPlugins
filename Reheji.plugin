@@ -1,0 +1,15 @@
+#!name = Revenuecat 系列解锁合集
+#!desc = 解锁 Revenuecat 系列 App 内购 (Script by @ddm1023)
+#!author = @ddm1023
+#!homepage = https://t.me/ddm1023
+#!icon = https://raw.githubusercontent.com/chxm1023/Rewrite/main/icon.png
+#!tag = 解锁,Revenuecat
+#!loon_version = 3.5.1(983)
+
+[Script]
+http-response ^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, requires-body=true, tag=Revenuecat解锁响应
+
+http-request ^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, requires-body=true, tag=Revenuecat解锁请求
+
+[MITM]
+hostname = api.revenuecat.com, api.rc-backup.com
